@@ -27,11 +27,13 @@ Aggregated, denormalised tables purpose-built for BI and analytical consumption.
 
 ## 📖 Project Overview
 
-This project involves:
+This project demonstrates:
 
-1. **Data Architecture**: Designing a Modern Data Lakehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the lakehouse in Databricks.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
+1. **Data Architecture**: Designed a modern data lakehouse on Databricks using the Medallion Architecture (**Bronze**, **Silver**, and **Gold**), enabling a clear separation between raw ingestion, data quality, and analytics-ready layers.
+2. **ETL Pipeline Development**: Built and orchestrated end-to-end batch pipelines using PySpark and Spark SQL to extract, transform, and load transactional data across Orders, Customers, and Products domains.
+3. **Data Modeling**: Developed fact and dimension tables optimised for analytical queries, applying deduplication and SCD patterns to maximise query performance at the Gold layer.
+4. **Workflow Orchestration**: Configured Databricks Workflows (Jobs) with task-level dependency chaining to trigger Silver and Gold notebook pipelines on a scheduled midnight batch run, ensuring fresh analytics data by start of business.
+5. **Version Control & Collaboration**: Managed all development directly from the Databricks platform using the integrated Git provider (GitHub), committing and merging notebook changes through feature branches without leaving the workspace.
 
 ## 🚀 Project Requirements
 
